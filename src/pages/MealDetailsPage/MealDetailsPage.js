@@ -6,6 +6,7 @@ import MealSingle from "../../components/Meal/MealSingle";
 import { useMealContext } from '../../context/mealContext';
 import { startFetchSingleMeal } from '../../actions/mealsActions';
 import Loader from '../../components/Loader/Loader';
+import Header from '../../components/Header/Header';
 
 const MealDetailsPage = () => {
   const {id} = useParams();
@@ -47,10 +48,13 @@ const MealDetailsPage = () => {
   }
 
   return (
+    <>
+    <Header />
     <main className='main-content bg-whitesmoke'>
       { (mealLoading) ? <Loader /> : <MealSingle meal = {singleMeal} /> }
       { (categoryLoading) ? <Loader /> : <CategoryList categories={categories} /> }
     </main>
+    </>
   )
 }
 

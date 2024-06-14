@@ -1,4 +1,5 @@
 @import "../../App.scss";
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
 .navbar{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 60px;
@@ -9,8 +10,10 @@
     .navbar-brand-text{
         margin-left: 5px;
     }
-    .navbar-search-btn{
+    .Sign_up{
         margin-right: 12px;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -22,9 +25,16 @@
 }
 
 .header{
+    .heading {
+        font-family: "Sevillana", cursive;
+        font-size: 72px;
+        font-weight: 600;
+        color : #fbbd0d;
+        text-shadow: 2px 2px #ff0000;
+    }
     .header-content{
         height: 400px;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../../assets/images/header_image.jpg") center/cover no-repeat;
+        background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.7)), url("../../assets/images/header_image.jpg") center/cover no-repeat;
     }
     .header-title{
         margin-top: 2.4rem;

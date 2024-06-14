@@ -4,6 +4,7 @@ import { useMealContext } from '../../context/mealContext';
 import MealList from '../../components/Meal/MealList';
 import { useParams } from 'react-router-dom';
 import { startFetchMealByCategory } from '../../actions/mealsActions';
+import Header from '../../components/Header/Header';
 
 const CategoryPage = () => {
   const {name} = useParams();
@@ -21,6 +22,8 @@ const CategoryPage = () => {
   }, [name, dispatch]);
 
   return (
+    <>
+    <Header />
     <main className='main-content py-5'>
       <div className='container'>
         <div className='cat-description px-4 py-4'>
@@ -32,6 +35,7 @@ const CategoryPage = () => {
         (categoryMeals?.length) ? <MealList meals = { categoryMeals } /> : null
       }
     </main>
+    </>
   )
 }
 
